@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: white; /* White background */
+  color: #5a3e36; /* Brown text color */
 }
 
 .logo {
@@ -12,10 +14,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #5a3e36aa); /* Brown highlight */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #5a3e36aa); /* Brown highlight */
 }
 
 @keyframes logo-spin {
@@ -35,16 +37,19 @@
 
 .card {
   padding: 2em;
+  background-color: #f9f4f2; /* Light brown background */
+  border: 1px solid #5a3e36; /* Brown border */
+  border-radius: 10px;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #5a3e36; /* Brown text */
 }
 
 .refresh-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #5a3e36; /* Brown background */
   color: white;
   border: none;
   border-radius: 5px;
@@ -52,5 +57,68 @@
 }
 
 .refresh-btn:hover {
-  background-color: #0056b3;
+  background-color: #3e2a26; /* Darker brown */
+}
+
+.tours-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.loading,
+.error {
+  font-size: 24px;
+  color: #5a3e36; /* Brown text */
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tour-card {
+  border: 1px solid #5a3e36; /* Brown border */
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  background-color: #f9f4f2; /* Light brown background */
+}
+
+.tour-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-details {
+  padding: 15px;
+}
+
+.tour-price {
+  font-weight: bold;
+  color: #5a3e36; /* Brown text */
+}
+
+.not-interested-btn {
+  padding: 10px;
+  background-color: #5a3e36; /* Brown background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.not-interested-btn:hover {
+  background-color: #3e2a26; /* Darker brown */
+}
+
+.no-tours {
+  text-align: center;
+  font-size: 18px;
+  color: #5a3e36; /* Brown text */
+  margin-top: 20px;
 }

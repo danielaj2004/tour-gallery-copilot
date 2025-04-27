@@ -10,7 +10,7 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://course-api.com/react-tours-project');
+      const response = await fetch('https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project');
       if (!response.ok) {
         throw new Error('Failed to fetch tours');
       }
@@ -29,15 +29,15 @@ function App() {
   }, []);
 
   const removeTour = (id) => {
-    setTours(tours.filter((tour) => tour.id !== id));
+    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
   };
 
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <h2 className="loading">Loading...</h2>;
   }
 
   if (error) {
-    return <h2>Error: {error}</h2>;
+    return <h2 className="error">Error: {error}</h2>;
   }
 
   if (tours.length === 0) {
